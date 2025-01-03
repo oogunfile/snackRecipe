@@ -8,7 +8,7 @@ A dynamic recipe menu showcasing popular African snacks like Puff-Puff, Chicken 
 - Git for cloning the repository
 
 ## How to Run the Project
-1. Clone the repository:
+1. Clone the repository: <git clone https://github.com/oogunfile/snackRecipe.git>
 2.  Navigate to the project directory:
 3.  Install dependencies: <npm install>
 4.  Start the server: <node index.js>
