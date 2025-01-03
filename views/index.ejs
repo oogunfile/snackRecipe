@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>African Snack Recipes</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>African Snack Recipes </h1>
+
+
+  <form action="/recipe" method="POST" class="buttons">
+    <button type="submit" value="puff" name="choice"><img src="/images/puff.png"></button>
+    <button type="submit" value="chickenpie" name="choice"><img src="/images/chicken.png"></button>
+    <button type="submit" value="eggroll" name="choice"><img src="/images/eggroll_pix.png"></button>
+  </form>
+  <div id="recipeContainer" class="hidden">
+    <%if (african_recipe) {%>
+
+      <h2 id="recipeTitle">
+
+        <%= african_recipe.name %>
+      </h2>
+      <p><%= african_recipe.description %></p>
+
+      <h3>Ingredients:</h3>
+      <ul> <% african_recipe.ingredients.forEach(element =>{%>
+        <li>
+          <%=element %>  </li>
+     <% }); %>
+      </ul>
+      </div>
+      <div id = "instructionContainer">
+      <h3>Instructions:</h3>
+      <ol>
+         <% african_recipe.instructions.forEach(element =>{%>
+        <li>
+          <%=element %>  </li>
+     <% }); %>
+      </ol>
+      <%} else {%>
+        <h2>Pick your favourite snack 👆</h2>
+        <%}%>
+  </div>
+</body>
+
+</html>
